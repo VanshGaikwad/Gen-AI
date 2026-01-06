@@ -1,0 +1,147 @@
+:root {
+  --bg: #f4f4f2;
+  --surface: #ffffff;
+  --dark: #1e1e1e;
+  --muted: #6b6b6b;
+  --accent: #b59b63;
+  --border: #e3e3e3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-wrapper {
+  width: 900px;
+  height: 85vh;
+  background: var(--surface);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.main-header {
+  padding: 24px 36px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--dark);
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.status {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* 🔥 critical for scrolling */
+}
+
+.chat-display {
+  flex: 1;
+  min-height: 0; /* 🔥 critical */
+  padding: 32px 36px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  scroll-behavior: smooth;
+  background: linear-gradient(#ffffff, #fafafa);
+}
+
+/* Optional: smoother scrollbar */
+.chat-display::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-display::-webkit-scrollbar-thumb {
+  background: #d6d6d6;
+  border-radius: 8px;
+}
+
+
+.message {
+  max-width: 75%;
+  padding: 14px 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  border-radius: 14px;
+}
+
+.user-message {
+  align-self: flex-end;
+  background: var(--dark);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+.ai-message {
+  align-self: flex-start;
+  background: #f0f0f0;
+  color: var(--dark);
+  border-left: 4px solid var(--accent);
+  border-bottom-left-radius: 4px;
+}
+
+.input-container {
+  padding: 24px 36px;
+  border-top: 1px solid var(--border);
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+input {
+  flex: 1;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--accent);
+}
+
+button {
+  padding: 0 26px;
+  border-radius: 12px;
+  border: none;
+  background: var(--dark);
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+button:hover {
+  opacity: 0.9;
+}

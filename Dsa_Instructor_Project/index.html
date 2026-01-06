@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DSA Logic Instructor</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-wrapper">
+  <header class="main-header">
+    <div class="logo">DSA<span>LOGIC</span></div>
+    <div class="status">Instructor System Online</div>
+  </header>
+
+  <main class="chat-container">
+    <div id="chat-box" class="chat-display">
+      <div class="message ai-message">
+        You are connected to the DSA Instructor.  
+        Ask Data Structures & Algorithms questions only.
+      </div>
+    </div>
+
+    <div class="input-container">
+      <div class="input-wrapper">
+        <input
+          id="user-input"
+          type="text"
+          placeholder="Enter DSA problem..."
+          autocomplete="off"
+        />
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- IMPORTANT: module because Gemini SDK uses ES modules -->
+<script type="module" src="script.js"></script>
+</body>
+</html>
